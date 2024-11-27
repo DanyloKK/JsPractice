@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*
+.calculator {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.screen {
+  height: 40px;
+  background-color: #f1f1f1;
+  text-align: right;
+  padding: 5px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.open-modal-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-active {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  width: 300px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.theme-toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+}
+.paragraph {
+  color: #4CAF50;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+}
+
+
+
+.shopping-list {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.toggle-visibility {
+  text-align: center;
+  margin: 20px;
+}
+.toggle-none{
+  display: none;
+}
+#toggleText {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+
+.image-gallery {
+  text-align: center;
+  margin: 20px;
+}
+.thumbnails {
+  display: flex;
+  justify-content: center;
+}
+.thumbnail {
+  width: 100px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.large-image {
+  max-width: 80%;
+  max-height: 80%;
+  width: 300px;
+  height: 300px;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.tooltip-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+#confirmationMessage {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.task-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin-left: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.main-container, .target-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#displayData {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.info {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 2000px; /* Длинная страница для демонстрации прокрутки
+}
+.button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.scroll-button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 100px;
+}
+.myElement {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 100px auto;
+}
+.info {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.section {
+  height: 600px;
+  padding: 20px;
+}
+.section:nth-child(odd) {
+  background-color: lightgray;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  height: 2000px; /* Для демонстрации прокрутки
+  padding: 20px;
+}
+.myElement {
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 800px auto; /* Размещаем элемент ниже для демонстрации
+}
+
+*/
+body {
+  transition: background 0.5s;
+}
+
+/*# sourceMappingURL=Scroll.css.map */

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/Scroll.css">
+</head>
+<body>
+<div style="height: 2000px;">Прокрутите вниз</div>
+<!--
+<h1>Размеры окна и документа</h1>
+<div class="info">
+    <p>Ширина окна: <span id="viewportWidth"></span> px</p>
+    <p>Высота окна: <span id="viewportHeight"></span> px</p>
+    <p>Полная ширина документа: <span id="documentWidth"></span> px</p>
+    <p>Полная высота документа: <span id="documentHeight"></span> px</p>
+</div>
+
+<h1>Прокрутка страницы</h1>
+<div class="button-container">
+    <button class="scroll-button" id="scrollDown">Вниз на 300px</button>
+    <button class="scroll-button" id="scrollUp">Наверх</button>
+</div>
+
+<h1 id="h1">Координаты элемента</h1>
+<div class="myElement">Целевой элемент</div>
+<div class="info">
+    <p>Координаты элемента относительно окна браузера:</p>
+    <p>Вертикальная позиция (top): <span id="verticalPosition"></span> px</p>
+    <p>Горизонтальная позиция (left): <span id="horizontalPosition"></span> px</p>
+</div>
+
+<nav>
+    <a href="#section1" >Секция 1</a>
+    <a href="#section2">Секция 2</a>
+    <a href="#section3">Секция 3</a>
+</nav>
+<div id="section1" class="section">Секция 1</div>
+<div id="section2" class="section">Секция 2</div>
+<div id="section3" class="section">Секция 3</div>
+
+<div class="myElement">Проверьте видимость этого элемента</div>
+
+<div class="form-container">
+    <h2>Форма пользователя</h2>
+    <form id="userForm">
+        <div>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+        <div>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" required></textarea>
+            <span class="error" id="messageError"></span>
+        </div>
+        <button type="submit" class="Confirm">Отправить</button>
+    </form>
+    <div id="confirmationMessage"></div>
+</div>
+
+<div class="task-container">
+    <h2>Список задач</h2>
+    <input type="text" class="Input__Field" placeholder="Введите задачу">
+    <button class="Add__Button">Добавить</button>
+    <ul class="Main__List"></ul>
+</div>
+
+<div class="main-container">
+    <h2>Главная страница</h2>
+    <input type="text" id="name" placeholder="Введите имя">
+    <input type="number" id="age" placeholder="Введите возраст">
+    <button id="navigateButton">Перейти на другую страницу</button>
+</div>
+-->
+<!--
+<div class="tooltip-container">
+    <button class="tooltip-button">Наведи на меня</button>
+    <span class="tooltip-text">Это подсказка!</span>
+</div>
+<div class="shopping-list">
+    <h2>Список покупок</h2>
+    <input type="text" id="itemInput" placeholder="Добавить элемент" />
+    <button id="addButton">Добавить</button>
+    <ul id="itemList"></ul>
+</div>
+
+<div class="toggle-visibility">
+    <h2>Показать/Скрыть текст</h2>
+    <button id="toggleButton">Показать</button>
+    <div id="toggleText" style="display: none;">Этот текст можно показать или скрыть!</div>
+</div>
+
+<div class="image-gallery">
+    <h2>Интерактивная галерея изображений</h2>
+    <div class="thumbnails">
+        <img src="images/cute-black-belt-kung-fu-animal_1003030-3660.jpg" class="thumbnail" alt="Изображение 1" />
+        <img src="images/medium.webp" class="thumbnail" alt="Изображение 2" />
+        <img src="images/images.jfif" class="thumbnail" alt="Изображение 3" />
+    </div>
+    <div id="modal" class="modal">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="largeImage" class="large-image" alt="Увеличенное изображение" />
+    </div>
+</div>
+
+
+
+
+
+<h1>Редактируемая таблица</h1>
+<table id="editableTable">
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Город</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Иван</td>
+        <td>25</td>
+        <td>Москва</td>
+    </tr>
+    <tr>
+        <td>Мария</td>
+        <td>30</td>
+        <td> Санкт-Петербург</td>
+    </tr>
+    <tr>
+        <td>Алексей</td>
+        <td>22</td>
+        <td>Казань</td>
+    </tr>
+    </tbody>
+</table>
+
+<button class="reset-button" id="resetButton">Сбросить таблицу</button>
+
+<button id="themeToggle">Переключить тему</button>
+<div class="content">Это пример текста на странице.</div>
+
+<button id="clickButton">Кликни меня!</button>
+<p>Количество кликов: <span id="clickCount">0</span></p>
+
+
+
+
+<h1>Добавьте пользователя</h1>
+<input type="text" id="nameInput" placeholder="Имя">
+<input type="number" id="ageInput" placeholder="Возраст">
+<button id="addButton">Добавить</button>
+
+<div id="cardContainer"></div>
+
+<div class="calculator">
+    <div class="screen">0</div>
+    <div class="buttons">
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="divide">/</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="multiply">*</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="minus">-</button>
+        <button class="button">0</button>
+        <button class="clear">C</button>
+        <button class="equal">=</button>
+        <button class="plus">+</button>
+    </div>
+</div>
+
+<div class="container">
+    <button class="open-modal-btn">Открыть модальное окно</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p class="modal ">Это модальное окно</p>
+        </div>
+    </div>
+</div>
+<div class="theme-container">
+    <button class="theme-toggle-btn">Сменить тему</button>
+    <p class="Par">Привет! Это текст на странице.</p>
+</div>
+-->
+<script src="Scripts/Scrolls.js"></script>
+</body>
+</html>

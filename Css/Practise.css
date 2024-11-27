@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item {
+    background-color: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.item:hover {
+    background-color: #ccc;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 10px 0;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-theme button {
+    background-color: #555;
+}
+
+.dark-theme .item {
+    background-color: #555;
+}
+
+/*# sourceMappingURL=Practise.css.map */

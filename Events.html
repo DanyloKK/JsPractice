@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+    <link rel="stylesheet" href="Css/Events.css">
+</head>
+<body>
+<input type="text" id="itemInput" placeholder="Добавьте элемент">
+<button id="addButton">Добавить</button>
+
+<ul id="itemList"></ul>
+<ul id="menu">
+    <li class="menu-item">Главная</li>
+    <li class="menu-item">Услуги</li>
+    <li class="menu-item">Контакты</li>
+</ul>
+
+<button id="openModal">Открыть модальное окно</button>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Это модальное окно!</p>
+    </div>
+</div>
+
+
+
+
+
+
+<ul id="itemList1">
+    <li class="List">Элемент 1 <span class="counter">0</span></li>
+    <li class="List">Элемент 2 <span class="counter">0</span></li>
+    <li class="List">Элемент 3 <span class="counter">0</span></li>
+    <li class="List">Элемент 4 <span class="counter">0</span></li>
+    <li class="List">Элемент 5 <span class="counter">0</span></li>
+</ul>
+
+
+
+
+
+
+<!-- Делегирование событий -->
+<!--
+<button type="button" class="button"><span>Нажми на меня!</span></button>
+<button type="button" class="button">И на меня!</button>
+<button type="button" class="button">И на меня!</button>
+<button type="button" class="button">И на меня!</button>
+ -->
+<!-- Пример с меню -->
+
+
+<!--
+<div class="container">
+    <h1>Делегирование событий</h1>
+    <div id="buttonContainer" class="button-container">
+        <button class="action-button" data-color="red">Красный</button>
+        <button class="action-button" data-color="green">Зеленый</button>
+        <button class="action-button" data-color="blue">Синий</button>
+        <button class="action-button" data-color="yellow">Желтый</button>
+    </div>
+    <p id="output">Нажми на одну из кнопок выше, чтобы изменить цвет текста.</p>
+</div>
+<h1>Заголовок</h1>
+<button id="changeTextButton">Нажми меня</button>
+
+<h2 id="counter">Счетчик: 0</h2>
+<button id="clickCounterButton">Кликни для увеличения</button>
+
+<div id="colorBox">
+    Block
+    <div class="divInner">
+        Block
+        <div class="divInnerInner">
+            Block
+
+        </div>
+    </div>
+</div>
+
+<input type="text" id="textInput" placeholder="Введите текст">
+<button id="submitButton">Отправить</button>
+<div id="errorMessage" style="color: red;"></div>
+
+<div class="container">
+    <h1>Практика с событиями</h1>
+
+    <button id="changeColorButton">Изменить цвет фона</button>
+
+    <input type="text" id="textInputT" placeholder="Введи текст..."/>
+    <p id="outputText">Выведенный текст появится здесь.</p>
+
+    <div class="hover-box" id="hoverBox">Наведи на меня курсор!</div>
+</div>
+-->
+
+<script src="Scripts/Events.js"></script>
+</body>
+</html>

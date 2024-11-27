@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form class="container__testimonial-menu" method="post" action="" name="Data_Submit">
+    <div class="menu-input1">
+        <input class="input1" pattern="[A-Za-z\s]{3,}" minlength="3" maxlength="50" title="Name should contain at least 3 characters and only letters and spaces." id="NameInput"  type="text" placeholder="Your Name"
+               required>
+    </div>
+    <div class="menu-input2">
+        <input class="input2" id="EmailInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address (e.g. example@domain.com)." min="6" max="20" type="email" placeholder="Your Email"
+               required>
+    </div>
+    <div class="menu-input3">
+        <input class="input3" pattern="^\+?[1-9]\d{1,14}$" minlength="10" maxlength="15"  title="Phone number should be in international format (e.g., +1234567890)." id="NumberInput"  type="text" placeholder="Your Number"
+               required>
+    </div>
+    <div class="menu-input4">
+        <input class="input4" id="DateInput" type="text" placeholder="Date" required>
+
+    </div>
+    <div class="TextArea">
+                 <textarea class="ServiceDescription" placeholder="Service Description" title="Insert your comment">
+                 </textarea>
+    </div>
+    <button class="SubmitButton" type="submit">Submit</button>
+    <script src="Scripts/Scrolls.js"></script>
+</form>
+</body>
+</html>

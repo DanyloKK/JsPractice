@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+<!--
+<form id="registrationForm">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="user_name" required>
+
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+<form id="passwordForm">
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Подтверждение пароля:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <button type="submit">Создать аккаунт</button>
+    <p id="errorMessage" style="color: red;"></p>
+</form>
+
+<form id="countryForm">
+    <label for="country">Выберите страну:</label>
+    <select id="country" name="country" required>
+        <option value="">--Выберите--</option>
+        <option value="Россия">Россия</option>
+        <option value="США">США</option>
+        <option value="Китай">Китай</option>
+        <option value="Индия">Индия</option>
+    </select>
+
+    <button type="submit">Отправить</button>
+</form>
+<form id="interestsForm">
+    <label>Выберите ваши интересы:</label>
+    <label><input type="checkbox" name="interests" value="Спорт"> Спорт</label>
+    <label><input type="checkbox" name="interests" value="Музыка"> Музыка</label>
+    <label><input type="checkbox" name="interests" value="Технологии"> Технологии</label>
+    <label><input type="checkbox" name="interests" value="Путешествия"> Путешествия</label>
+
+    <button type="submit">Отправить</button>
+</form>
+
+<form id="fileUploadForm">
+    <label for="file">Выберите файл:</label>
+    <input type="file" id="file" name="file" required>
+
+    <button type="submit">Загрузить</button>
+</form>
+<form id="reviewForm">
+    <label for="review">Ваш отзыв:</label>
+    <textarea id="review" name="review" required></textarea>
+
+    <button type="submit">Отправить отзыв</button>
+</form>
+
+<input type="text" id="textInput" placeholder="Введите текст">
+<p id="output"></p>
+<input type="file" id="fileInput">
+<p id="fileName">Имя файла: не выбрано</p>
+
+<input type="text" id="focusInput" placeholder="Нажмите здесь">
+-->
+<form id="userInfoForm">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label>Пол:</label>
+    <label><input type="radio" name="gender" value="male" required> Мужчина</label>
+    <label><input type="radio" name="gender" value="female" required> Женщина</label>
+
+    <button type="submit">Отправить</button>
+</form>
+<script src="forms.reg.phrases.js"></script>
+</body>
+</html>
