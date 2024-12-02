@@ -316,7 +316,7 @@ spentMoneyPromise
     .then((result) => shopping(result))
     .then((result) => cacheBack(result))
 
- */
+
 function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -403,3 +403,150 @@ async function updateComment() {
 }
 
 updateComment();
+class FormsValidation {
+    selectors = {
+        form: '[data-js-form]',
+        fieldErrors: '[data-js-form-field-errors]'
+    }
+}
+
+new FormsValidation()
+const formElement = document.querySelector(".form")
+formElement.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const formObject = new FormData(formElement)
+    /*
+    new FormData — это встроенный объект в JavaScript,
+    который используется для сборки и отправки данных формы
+    (например, при отправке формы с помощью AJAX или Fetch API).
+    Он предоставляет удобный способ для работы с данными формы,
+    извлекая значения из элементов формы и упрощая их отправку на сервер.
+    formObject.append("example", "hello-hello");
+
+console.log(formObject.get("example"))// получакм value
+console.log(formObject.get("name"))// проверили знач поля
+console.log(formObject.has("name"))// проверяет записано ли что-то
+formObject.delete("example")//удаляем из formObject
+console.log(Object.fromEntries(formObject))//тут мы просто вывели данные ,но для сервера хватит и команды сверху
+})
+ */
+
+class FormsValidation {
+    selectors = {
+        form: '[data-js-form]',
+        fieldErrors: '[data-js-form-field-errors]'
+    }
+
+    constructor() {
+        this.bindEvents()
+    }
+
+    manageErrors(fieldControlElement, errorMessages) {
+        const fieldErrorsElement = fieldControlElement.parentElement.querySelector(this.selectors.fieldErrors);
+        fieldErrorsElement.innerHTML = errorMessages
+            .map((message) => `<span class=field__errors>${message}</span>`)
+            .join("")//соед массив в строку
+    }
+
+    errorMessages = {
+        valueMissing: () => "Пожалуйста заполните это поле",
+        patternMismatch: ({title}) => title || "Данные не соответствуют формату",
+        tooShort: ({minLength}) => `Слишком короткое значение, минимум - ${minLength} `,
+        tooLong: ({maxLength}) => `Слишком длинное значение, ограничение - ${maxLength}`,
+        /*
+        свойства из validity которые указ
+        на сост полей по разным ошибкам
+        а тут мы будем выводить сообщения
+        тут мы деструкт title и другие
+        по другому не сработает чтобы вывести то самое знач
+        и чтобы оно извлеклось нужно в функцию
+        снизу положить fieldControlElement для
+        получения єлемента на котором мы фокусимся
+         */
+    }
+
+    validateField(fieldControlElement) {
+        const errors = fieldControlElement.validity;
+        const errorMessages = [];
+        Object.entries(this.errorMessages).forEach(([errorType, getErrorMessage]) => {
+            if (errors[errorType]) {
+                /*
+                тут делаем доступ к значению
+                и проверям true или false
+                 */
+                errorMessages.push(getErrorMessage(fieldControlElement))
+            }
+        })
+        this.manageErrors(fieldControlElement, errorMessages)
+    }
+
+    onBlur(event) {
+        const {target} = event;
+        const isFormField = target.closest(this.selectors.form);
+        const isRequired = target.required
+        if (isFormField && isRequired) {
+            this.validateField(event.target)
+            /*
+            тут мы передали дом элемент в аргумент метода
+            а валидити для обработки этих ошибок
+             */
+        }
+    }
+
+    bindEvents() {
+        document.addEventListener('blur', (event) => {
+            this.onBlur(event)
+        }, {capture: true})
+        /*
+        здесь мы передали (ивент) чтобы
+        вызвать функцию и обработать событие с использ данных
+        Когда происходит событие blur, срабатывает метод onBlur, который
+        в свою очередь вызывает метод validateField для выполнения валидаци
+        blur событие не всплывает
+        и поэтому его нужно принудительно захватить
+        Когда вы пишете this.onBlur(event) внутри bindEvents(),
+        это означает, что метод onBlur будет вызван на объекте класса,
+        а this внутри этого метода будет ссылаться на тот же экземпляр класса.
+        Метод onBlur:
+        В методе onBlur вы снова используете
+        this.validateField(event.target), что означает,
+        что метод validateField будет вызван на текущем экземпляре класса,
+        и контекст this будет указывать на этот экземпляр.
+        тут мы писали this исключительно для того чтобы
+        при созд нового экземпляра класса все методы не теряли контекст
+         */
+        console.log('Контекст:', this);
+        /*
+        тут this указ на сам класс
+        то есть то что наход внутри него
+        Контекст this в этом случае не теряется,
+        потому что метод вызывается на экземпляре (this.bindEvents()).
+        Нет необходимости в bind:
+        Пока метод bindEvents не передается
+        как коллбек (например, в обработчик события),
+        он будет работать корректно без дополнительной привязки контекста.
+        но если надо будет его запихнуть в обработчик функция
+        например и тд то нужен будет bind
+
+         */
+    }
+}
+
+new FormsValidation()
+
+
+class Person {
+    getName(names) {
+        this.addName(names)
+    }
+
+    addName(names) {
+        console.log(`${names}`)
+    }
+}
+
+const result = new Person;
+result.getName("Данило")
+const res = document.getElementById("login")
+const errors = res.validity;
+console.log(errors)
